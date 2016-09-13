@@ -1,5 +1,5 @@
 server {  
-    listen 80;  
+    listen 8080;  
     location / {  
         proxy_pass http://spark-master:8080;  
         proxy_set_header Host $host;  
@@ -10,7 +10,7 @@ server {
 }
 
 server {  
-    listen 81;  
+    listen 50070;  
     location / {  
         proxy_pass http://hdfs-namenode:50070;  
         proxy_set_header Host $host;  
